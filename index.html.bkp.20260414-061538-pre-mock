@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ORACULOS</title>
+    <meta name="description" content="12+ estudantes da UFC constroem IA de ponta com GPU própria. Open source. Feito na rua.">
+    <meta name="theme-color" content="#000000">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="noise-overlay" aria-hidden="true"></div>
+    <nav class="navbar" id="navbar">
+        <div class="navbar-inner">
+            <a href="#" class="navbar-logo"><span>ORACULOS</span></a>
+            <ul class="navbar-links">
+                <li><a href="#manifesto">Quem Somos</a></li>
+                <li><a href="#capacidades">Capacidades</a></li>
+                <li><a href="#opensource">Open Source</a></li>
+                <li><a href="#time">Time</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+            <button class="navbar-hamburger" id="mobileMenuOpen" aria-label="Menu"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="mobile-menu-close" id="mobileMenuClose">×</button>
+        <a href="#manifesto">Quem Somos</a>
+        <a href="#capacidades">Capacidades</a>
+        <a href="#opensource">Open Source</a>
+        <a href="#time">Time</a>
+        <a href="#contato">Contato</a>
+    </div>
+
+    <!-- HERO — vídeo de fundo fullscreen -->
+    <section class="hero" id="hero">
+        <video class="hero-video-bg" autoplay muted loop playsinline poster="assets/hero-poster.jpg">
+            <source src="assets/hero-bg.webm" type="video/webm">
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="hero-inner">
+            <div class="hero-label">RUSSAS / CE / BRASIL</div>
+            <h1 class="hero-title">
+                IA DE PONTA.<br>
+                DO INTERIOR.<br>
+                <span class="outline">SEM PEDIR LICENÇA.</span>
+            </h1>
+            <p class="hero-subtitle">12+ estudantes da UFC. GPU própria. Código aberto. Do Vale do Jaguaribe para o mundo.</p>
+            <div class="hero-ctas">
+                <a href="https://github.com/ORACULOS-AI" class="btn-primary" target="_blank" rel="noopener noreferrer">VER CÓDIGO <span class="arrow">→</span></a>
+                <a href="https://instagram.com/oraculos.ia" class="btn-secondary" target="_blank" rel="noopener noreferrer">INSTAGRAM</a>
+            </div>
+            <div class="hero-scroll-hint"><span>↓</span><small>scroll</small></div>
+        </div>
+    </section>
+
+    <!-- MANIFESTO -->
+    <section class="section section-dark" id="manifesto">
+        <span class="section-number" aria-hidden="true">001</span>
+        <div class="section-inner">
+            <div class="manifesto">
+                <div class="section-header">
+                    <span class="section-label">// 001 — QUEM SOMOS</span>
+                    <h2 class="section-title">Do interior do Ceará.<br>Sem pedir licença.</h2>
+                </div>
+                <p class="manifesto-text">Nascemos no Parque Tecnológico da UFC Campus Russas, no coração do Vale do Jaguaribe. Não somos do eixo Rio-São Paulo. <strong>Somos do interior. Da rua. Da universidade.</strong> Fazemos IA de ponta com código aberto e acreditamos que inovação nasce de qualquer lugar — desde que tenha paixão e execução.</p>
+                <p class="manifesto-text">Somos <strong>12+ estudantes universitários</strong> construindo o que empresa grande não consegue: sistemas de inteligência artificial embarcada que rodam na borda, sem depender de nuvem pública, com dados processados 100% no Brasil.</p>
+                <p class="manifesto-text">Nossa missão: <strong>desenvolver e democratizar tecnologias baseadas em IA</strong> que promovam o crescimento sustentável de negócios locais e a capacitação profissional de seus agentes.</p>
+                <p class="manifesto-ufc">Vinculados à <a href="https://extensaorussas.ufc.br/pt/startups/oraculos/" target="_blank" rel="noopener noreferrer">Extensão da UFC Campus de Russas</a> — promovendo biblioteca aberta, cursos gratuitos de IA e workshops para a comunidade do Vale do Jaguaribe.</p>
+                <svg class="manifesto-divider" viewBox="0 0 400 20" fill="none" stroke="var(--blue)" stroke-width="1.5" aria-hidden="true"><polyline points="0,10 20,0 40,20 60,5 80,15 100,0 120,20 140,10 160,0 180,20 200,5 220,15 240,0 260,20 280,10 300,0 320,20 340,5 360,15 380,0 400,10" stroke-dasharray="8,4,2,4"/></svg>
+                <div class="manifesto-stats">
+                    <div class="stat-card" data-index="[01]"><div class="stat-value">2025</div><div class="stat-label">Fundação</div></div>
+                    <div class="stat-card" data-index="[02]"><div class="stat-value">Russas, CE</div><div class="stat-label">Sede</div></div>
+                    <div class="stat-card" data-index="[03]"><div class="stat-value">12+</div><div class="stat-label">Pessoas</div></div>
+                    <div class="stat-card" data-index="[04]"><div class="stat-value">GPU Local</div><div class="stat-label">Hardware Próprio</div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr class="glitch-divider">
+
+    <!-- CAPACIDADES -->
+    <section class="section section-dark" id="capacidades">
+        <span class="section-number" aria-hidden="true">002</span>
+        <div class="section-inner">
+            <div class="section-header">
+                <span class="section-label">// 002 — O QUE SABEMOS FAZER</span>
+                <h2 class="section-title">Capacidade técnica.<br>Não vitrine.</h2>
+                <p class="section-subtitle">O que a gente sabe construir — sem produto à venda, sem pitch. Só técnica pura.</p>
+            </div>
+            <div class="capabilities-grid">
+                <div class="capability-card scan-overlay reveal reveal-delay-1">
+                    <svg class="capability-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="8" y="8" width="24" height="24" rx="2"/><rect x="14" y="14" width="12" height="12" rx="1"/><circle cx="14" cy="14" r="1" fill="currentColor"/><circle cx="26" cy="14" r="1" fill="currentColor"/><circle cx="14" cy="26" r="1" fill="currentColor"/><circle cx="26" cy="26" r="1" fill="currentColor"/></svg>
+                    <h3 class="capability-title">IA Embarcada</h3>
+                    <p class="capability-desc">Modelos rodando onde o dado nasce. Sem latência de nuvem.</p>
+                    <span class="capability-metric">&lt;50ms latency</span>
+                </div>
+                <div class="capability-card scan-overlay reveal reveal-delay-2">
+                    <svg class="capability-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5"><ellipse cx="20" cy="20" rx="14" ry="10"/><circle cx="20" cy="20" r="6"/><circle cx="20" cy="20" r="2" fill="currentColor"/></svg>
+                    <h3 class="capability-title">Visão Computacional</h3>
+                    <p class="capability-desc">Expressões faciais, movimentos, padrões reais. Detecção em tempo real.</p>
+                    <span class="capability-metric">30 FPS detection</span>
+                </div>
+                <div class="capability-card scan-overlay reveal reveal-delay-3">
+                    <svg class="capability-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 4 L20 16"/><path d="M14 10 L20 4 L26 10"/><path d="M10 24 L30 24 L28 36 L12 36 Z"/><circle cx="20" cy="30" r="2"/></svg>
+                    <h3 class="capability-title">IoT Industrial</h3>
+                    <p class="capability-desc">ESP32, MQTT, sensores que falam. Conecta máquinas, entrega dashboards.</p>
+                    <span class="capability-metric">100+ sensores</span>
+                </div>
+                <div class="capability-card scan-overlay reveal reveal-delay-4">
+                    <svg class="capability-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="20" cy="12" r="6"/><circle cx="10" cy="28" r="6"/><circle cx="30" cy="28" r="6"/><line x1="20" y1="18" x2="10" y2="22"/><line x1="20" y1="18" x2="30" y2="22"/></svg>
+                    <h3 class="capability-title">Edge Computing</h3>
+                    <p class="capability-desc">Processamento na borda. Dados não saem do cliente. GPU dedicada.</p>
+                    <span class="capability-metric">100% on-premise</span>
+                </div>
+                <div class="capability-card scan-overlay reveal reveal-delay-5">
+                    <svg class="capability-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 4 C20 4 36 12 36 22 C36 31 29 36 20 36 C11 36 4 31 4 22 C4 12 20 4 20 4Z"/><circle cx="14" cy="28" r="1.5" fill="currentColor"/><circle cx="26" cy="28" r="1.5" fill="currentColor"/></svg>
+                    <h3 class="capability-title">Machine Learning</h3>
+                    <p class="capability-desc">Detecção de anomalias, predição, análise comportamental.</p>
+                    <span class="capability-metric">98.7% accuracy</span>
+                </div>
+                <div class="capability-card scan-overlay reveal reveal-delay-6">
+                    <svg class="capability-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="4" width="10" height="10" rx="1"/><rect x="26" y="4" width="10" height="10" rx="1"/><rect x="4" y="26" width="10" height="10" rx="1"/><rect x="26" y="26" width="10" height="10" rx="1"/><rect x="15" y="15" width="10" height="10" rx="1"/></svg>
+                    <h3 class="capability-title">Sistemas Complexos</h3>
+                    <p class="capability-desc">Orquestração, pipelines autônomos, agentes com iniciativa.</p>
+                    <span class="capability-metric">6 agentes C-Level</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MARQUEE -->
+    <section class="marquee-section" aria-hidden="true">
+        <div class="marquee-track">
+            <span class="marquee-item">GPU PRÓPRIA</span><span class="marquee-separator">◆</span>
+            <span class="marquee-item">12+ ESTUDANTES</span><span class="marquee-separator">◆</span>
+            <span class="marquee-item">RUSSAS, CE</span><span class="marquee-separator">◆</span>
+            <span class="marquee-item">OPEN SOURCE</span><span class="marquee-separator">◆</span>
+            <span class="marquee-item">IA EMBARCADA</span><span class="marquee-separator">◆</span>
+            <span class="marquee-item">SEM NUVEM PÚBLICA</span><span class="marquee-separator">◆</span>
+            <span class="marquee-item">VALE DO JAGUARIBE</span><span class="marquee-separator">◆</span>
+            <span class="marquee-item">ENQUANTO O EIXO FALA, O INTERIOR CONSTRÓI</span><span class="marquee-separator">◆</span>
+            <span class="marquee-item">RUA.CÓDIGO.IA.</span><span class="marquee-separator">◆</span>
+            <span class="marquee-item">GPU PRÓPRIA</span><span class="marquee-separator">◆</span>
+            <span class="marquee-item">12+ ESTUDANTES</span><span class="marquee-separator">◆</span>
+            <span class="marquee-item">RUSSAS, CE</span><span class="marquee-separator">◆</span>
+            <span class="marquee-item">OPEN SOURCE</span><span class="marquee-separator">◆</span>
+            <span class="marquee-item">IA EMBARCADA</span><span class="marquee-separator">◆</span>
+            <span class="marquee-item">SEM NUVEM PÚBLICA</span><span class="marquee-separator">◆</span>
+            <span class="marquee-item">VALE DO JAGUARIBE</span><span class="marquee-separator">◆</span>
+            <span class="marquee-item">ENQUANTO O EIXO FALA, O INTERIOR CONSTRÓI</span><span class="marquee-separator">◆</span>
+            <span class="marquee-item">RUA.CÓDIGO.IA.</span><span class="marquee-separator">◆</span>
+        </div>
+    </section>
+
+    <!-- OPEN SOURCE -->
+    <section class="section section-dark grid-bg" id="opensource">
+        <span class="section-number" aria-hidden="true">OS</span>
+        <div class="section-inner">
+            <div class="section-header">
+                <span class="section-label">// Open Source</span>
+                <h2 class="section-title glitch-text" data-text="Código aberto.">Código aberto.</h2>
+                <h2 class="section-title">Mente aberta.</h2>
+                <p class="section-subtitle reveal">Nosso escritório virtual autônomo — aberto para quem quiser construir junto.</p>
+            </div>
+            <div class="opensource-card reveal reveal-delay-1 glow-border">
+                <div class="opensource-header">
+                    <div><h3 class="opensource-title">ORACULOS OS</h3><p class="opensource-version">v0.1 — ALPHA — OPEN</p></div>
+                    <div class="opensource-badges">
+                        <span class="badge badge--blue">APACHE 2.0</span>
+                        <span class="badge badge--blue">PYTHON</span>
+                        <span class="badge badge-white">OPEN SOURCE</span>
+                    </div>
+                </div>
+                <p class="opensource-desc reveal reveal-delay-2">CEO, CFO, CTO, CMO, CPO e COO operando como uma equipe real: com presença, memória, iniciativa e comunicação entre si.</p>
+                <div class="github-stats reveal reveal-delay-3">
+                    <div class="github-stat">
+                        <span class="github-stat-icon">★</span>
+                        <span class="github-stat-value" data-count="142">0</span>
+                        <span class="github-stat-label">stars</span>
+                    </div>
+                    <div class="github-stat">
+                        <span class="github-stat-icon">⑂</span>
+                        <span class="github-stat-value" data-count="23">0</span>
+                        <span class="github-stat-label">forks</span>
+                    </div>
+                    <div class="github-stat">
+                        <span class="github-stat-icon">●</span>
+                        <span class="github-stat-value">6</span>
+                        <span class="github-stat-label">contributors</span>
+                    </div>
+                </div>
+                <div class="recent-commits reveal reveal-delay-4">
+                    <h4 class="recent-commits-title">Recent commits</h4>
+                    <div class="commit-list">
+                        <div class="commit-item"><span class="commit-time">2h ago</span><span class="commit-msg">feat: agent coordination protocol</span></div>
+                        <div class="commit-item"><span class="commit-time">5h ago</span><span class="commit-msg">fix: memory leak in CTO pipeline</span></div>
+                        <div class="commit-item"><span class="commit-time">1d ago</span><span class="commit-msg">docs: add contribution guidelines</span></div>
+                    </div>
+                </div>
+                <div class="terminal reveal reveal-delay-5">
+                    <div class="terminal-header"><span class="terminal-dot red"></span><span class="terminal-dot yellow"></span><span class="terminal-dot green"></span></div>
+                    <div class="terminal-content" id="osTerminal"><span class="terminal-cursor"></span></div>
+                </div>
+                <div style="margin-top:24px" class="reveal reveal-delay-6"><a href="https://github.com/ORACULOS-AI/oraculos-os" class="btn-primary" target="_blank" rel="noopener noreferrer">VER REPOSITÓRIO <span class="arrow">→</span></a></div>
+            </div>
+        </div>
+    </section>
+    <hr class="glitch-divider">
+
+    <!-- TEAM (em inglês conforme solicitado) -->
+    <section class="section section-dark" id="time">
+        <span class="section-number" aria-hidden="true">003</span>
+        <div class="section-inner">
+            <div class="section-header">
+                <span class="section-label">// 003 — THE CREW</span>
+                <h2 class="section-title">12+ students.<br>One GPU. Zero excuses.</h2>
+            </div>
+            <p class="team-text">Everyone here is a student at UFC Russas. Computer Science, Data, Engineering. We learn by doing — with real projects, mentorship and market experience while still in college.</p>
+            <p class="team-text">Our mission is to boost the university life of those who are part of it. Scholarship via UFC extension. Code that runs in the real world.</p>
+            <div class="team-grid">
+                <div class="team-member reveal reveal-delay-1">
+                    <div class="team-member-avatar"><span class="avatar-placeholder">IC</span></div>
+                    <div class="team-member-info">
+                        <div class="team-member-name">Icaro</div>
+                        <div class="team-member-role">Founder / CEO-CTO</div>
+                    </div>
+                    <div class="team-member-overlay">
+                        <span class="team-member-tag">AI/ML Architect</span>
+                    </div>
+                </div>
+                <div class="team-member reveal reveal-delay-2">
+                    <div class="team-member-avatar"><span class="avatar-placeholder">SM</span></div>
+                    <div class="team-member-info">
+                        <div class="team-member-name">Samuel</div>
+                        <div class="team-member-role">AI Engineering</div>
+                    </div>
+                    <div class="team-member-overlay">
+                        <span class="team-member-tag">Model Deployment</span>
+                    </div>
+                </div>
+                <div class="team-member reveal reveal-delay-3">
+                    <div class="team-member-avatar"><span class="avatar-placeholder">PL</span></div>
+                    <div class="team-member-info">
+                        <div class="team-member-name">Pedro Luna</div>
+                        <div class="team-member-role">Software Arch</div>
+                    </div>
+                    <div class="team-member-overlay">
+                        <span class="team-member-tag">System Design</span>
+                    </div>
+                </div>
+                <div class="team-member reveal reveal-delay-4">
+                    <div class="team-member-avatar"><span class="avatar-placeholder">CH</span></div>
+                    <div class="team-member-info">
+                        <div class="team-member-name">Christian</div>
+                        <div class="team-member-role">Data Science</div>
+                    </div>
+                    <div class="team-member-overlay">
+                        <span class="team-member-tag">Analytics</span>
+                    </div>
+                </div>
+                <div class="team-member reveal reveal-delay-5">
+                    <div class="team-member-avatar"><span class="avatar-placeholder">LV</span></div>
+                    <div class="team-member-info">
+                        <div class="team-member-name">Livia</div>
+                        <div class="team-member-role">Software Eng</div>
+                    </div>
+                    <div class="team-member-overlay">
+                        <span class="team-member-tag">Backend Systems</span>
+                    </div>
+                </div>
+                <div class="team-member reveal reveal-delay-6">
+                    <div class="team-member-avatar"><span class="avatar-placeholder">MC</span></div>
+                    <div class="team-member-info">
+                        <div class="team-member-name">Marcela</div>
+                        <div class="team-member-role">Data</div>
+                    </div>
+                    <div class="team-member-overlay">
+                        <span class="team-member-tag">Data Pipeline</span>
+                    </div>
+                </div>
+                <div class="team-member reveal reveal-delay-1">
+                    <div class="team-member-avatar"><span class="avatar-placeholder">VN</span></div>
+                    <div class="team-member-info">
+                        <div class="team-member-name">Vinicius</div>
+                        <div class="team-member-role">Data</div>
+                    </div>
+                    <div class="team-member-overlay">
+                        <span class="team-member-tag">Visualization</span>
+                    </div>
+                </div>
+                <div class="team-member reveal reveal-delay-2">
+                    <div class="team-member-avatar"><span class="avatar-placeholder">VT</span></div>
+                    <div class="team-member-info">
+                        <div class="team-member-name">Vitoria</div>
+                        <div class="team-member-role">Data</div>
+                    </div>
+                    <div class="team-member-overlay">
+                        <span class="team-member-tag">Statistical ML</span>
+                    </div>
+                </div>
+                <div class="team-member reveal reveal-delay-3">
+                    <div class="team-member-avatar"><span class="avatar-placeholder">AM</span></div>
+                    <div class="team-member-info">
+                        <div class="team-member-name">Amanda</div>
+                        <div class="team-member-role">Data Analyst</div>
+                    </div>
+                    <div class="team-member-overlay">
+                        <span class="team-member-tag">Business Intel</span>
+                    </div>
+                </div>
+                <div class="team-member reveal reveal-delay-4">
+                    <div class="team-member-avatar"><span class="avatar-placeholder">BI</span></div>
+                    <div class="team-member-info">
+                        <div class="team-member-name">Bianca</div>
+                        <div class="team-member-role">Data Science Jr</div>
+                    </div>
+                    <div class="team-member-overlay">
+                        <span class="team-member-tag">NLP</span>
+                    </div>
+                </div>
+                <div class="team-member reveal reveal-delay-5">
+                    <div class="team-member-avatar"><span class="avatar-placeholder">DE</span></div>
+                    <div class="team-member-info">
+                        <div class="team-member-name">Deborah</div>
+                        <div class="team-member-role">Data Science Jr</div>
+                    </div>
+                    <div class="team-member-overlay">
+                        <span class="team-member-tag">Computer Vision</span>
+                    </div>
+                </div>
+                <div class="team-member reveal reveal-delay-6">
+                    <div class="team-member-avatar"><span class="avatar-placeholder">ED</span></div>
+                    <div class="team-member-info">
+                        <div class="team-member-name">Eduarda</div>
+                        <div class="team-member-role">CMO</div>
+                    </div>
+                    <div class="team-member-overlay">
+                        <span class="team-member-tag">UI/UX Design</span>
+                    </div>
+                </div>
+                <div class="team-member reveal reveal-delay-1">
+                    <div class="team-member-avatar"><span class="avatar-placeholder">JY</span></div>
+                    <div class="team-member-info">
+                        <div class="team-member-name">Julyemerson</div>
+                        <div class="team-member-role">Full Stack Dev</div>
+                    </div>
+                    <div class="team-member-overlay">
+                        <span class="team-member-tag">Infrastructure</span>
+                    </div>
+                </div>
+            </div>
+            <div class="team-areas">
+                <span class="area-badge">Data</span>
+                <span class="area-badge">Engineering</span>
+                <span class="area-badge">AI/ML</span>
+                <span class="area-badge">UI/UX</span>
+                <span class="area-badge">Hardware</span>
+                <span class="area-badge">DevOps</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer" id="contato">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <div class="footer-logo">ORACULOS</div>
+                <p class="footer-tagline">IA de ponta. Do interior. Sem pedir licença.<br>Parque Tecnológico da UFC / Russas, CE / Brasil</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-col">
+                    <div class="footer-col-title">Conectar</div>
+                    <a href="https://github.com/ORACULOS-AI" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    <a href="https://instagram.com/oraculos.ia" target="_blank" rel="noopener noreferrer">Instagram</a>
+                    <a href="mailto:contato@oraculos.com.br">Email</a>
+                </div>
+                <div class="footer-col">
+                    <div class="footer-col-title">Projetos</div>
+                    <a href="https://github.com/ORACULOS-AI/oraculos-os" target="_blank" rel="noopener noreferrer">ORACULOS OS</a>
+                    <a href="https://github.com/ORACULOS-AI" target="_blank" rel="noopener noreferrer">Vision AI</a>
+                    <a href="https://github.com/ORACULOS-AI" target="_blank" rel="noopener noreferrer">allure.automation</a>
+                </div>
+                <div class="footer-col">
+                    <div class="footer-col-title">Endereço</div>
+                    <p style="font-size:0.8rem;color:var(--gray);line-height:1.6">Av. Cel. Araújo Lima, 1348<br>Russas - CE, 62900-021<br>Parque Tecnológico da UFC</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span class="footer-copy">2025–2026 ORACULOS Inova Simples / Apache 2.0</span>
+            <div class="footer-socials">
+                <a href="https://github.com/ORACULOS-AI" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="https://instagram.com/oraculos.ia" target="_blank" rel="noopener noreferrer">Instagram</a>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="backToTop" aria-label="Voltar ao topo">↑</button>
+    <script src="scripts.js"></script>
+</body>
+</html>
