@@ -3,27 +3,34 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ORACULOS</title>
-<meta name="theme-color" content="#000000">
+<title>ORACULOS — IA do interior do Ceará</title>
+<meta name="description" content="Coletivo de IA da UFC Russas. Hardware próprio, código aberto, do Vale do Jaguaribe pro mundo.">
+<meta name="theme-color" content="#0a0a0a">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;700;900&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=block">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;700;900&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=block">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;700;900&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;700;900&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap">
 <link rel="stylesheet" href="styles.css">
 <script>
   if ('fonts' in document) {
     document.documentElement.classList.add('fonts-loading');
-    document.fonts.ready.then(() => {
+    const reveal = () => {
       document.documentElement.classList.remove('fonts-loading');
       document.documentElement.classList.add('fonts-ready');
-    });
+    };
+    document.fonts.ready.then(reveal);
+    // safety: never let typography stall the hero — reveal anyway after 1.2s
+    setTimeout(reveal, 1200);
   }
 </script>
 </head>
 <body>
 
+<a href="#manifesto" class="skip-link">pular para o conteúdo</a>
+
 <div class="grain" aria-hidden="true"></div>
 <div class="plastic" aria-hidden="true"></div>
+<div class="spotlight" aria-hidden="true"></div>
 
 <header class="topbar">
   <div class="mark">
@@ -38,11 +45,12 @@
 </header>
 
 <!-- HERO -->
-<section class="hero">
-  <video class="hero-bg" autoplay muted loop playsinline poster="assets/hero-poster.jpg">
+<section class="hero" aria-label="abertura">
+  <video class="hero-bg" autoplay muted loop playsinline poster="assets/hero-poster.jpg" aria-hidden="true">
     <source src="assets/hero-bg.webm" type="video/webm">
   </video>
-  <div class="hero-veil"></div>
+  <div class="hero-veil" aria-hidden="true"></div>
+  <div class="hero-noise" aria-hidden="true"></div>
 
   <div class="hero-inner">
     <div class="hero-eyebrow">
@@ -51,14 +59,33 @@
     </div>
 
     <h1 class="hero-word">
-      <span class="line">ORÁCULOS</span>
-      <span class="line sub"><em>não pedem</em></span>
-      <span class="line">LICENÇA.</span>
+      <span class="line"><span class="line-inner">ORÁCULOS</span></span>
+      <span class="line sub"><span class="line-inner"><em>não pedem</em></span></span>
+      <span class="line"><span class="line-inner">LICENÇA.</span></span>
     </h1>
+
+    <!-- glass info chip stack — anti-grid, floats off-axis -->
+    <aside class="hero-chips" aria-label="metadados">
+      <div class="chip glass">
+        <span class="chip-k">cap.</span>
+        <span class="chip-v">01 / 04</span>
+      </div>
+      <div class="chip glass">
+        <span class="chip-k">stack</span>
+        <span class="chip-v">rua · código · ia</span>
+      </div>
+      <div class="chip glass">
+        <span class="chip-k">licença</span>
+        <span class="chip-v">apache 2.0</span>
+      </div>
+    </aside>
 
     <div class="hero-foot">
       <span class="file">// cap_01 — marca</span>
-      <span class="scroll">rolar ↓</span>
+      <a href="#manifesto" class="scroll-cue glass" aria-label="rolar para o manifesto">
+        <span class="scroll-cue-label">rolar</span>
+        <span class="scroll-cue-arrow" aria-hidden="true">↓</span>
+      </a>
     </div>
   </div>
 
@@ -69,20 +96,28 @@
 
 <!-- MANIFESTO -->
 <section class="m" id="manifesto">
-  <span class="chapter">◢ 02</span>
+  <span class="chapter reveal" data-reveal>◢ 02</span>
   <div class="m-inner">
-    <p class="kicker">manifesto</p>
-    <h2 class="bighead">
-      Enquanto o<br>
-      <em class="serif">eixo fala,</em><br>
-      o interior<br>
-      <span class="blue">constrói.</span>
+    <p class="kicker reveal" data-reveal>manifesto</p>
+
+    <h2 class="bighead splitlines">
+      <span class="line"><span class="line-inner">Enquanto o</span></span>
+      <span class="line"><span class="line-inner"><em class="serif">eixo fala,</em></span></span>
+      <span class="line"><span class="line-inner">o interior</span></span>
+      <span class="line"><span class="line-inner"><span class="blue">constrói.</span></span></span>
     </h2>
 
-    <div class="para">
+    <div class="para reveal" data-reveal data-delay="200">
       <p>Não é startup. Não é marca de roupa. Não é pitch.</p>
       <p>É <strong>um bando de estudante da UFC Russas</strong> fazendo IA de ponta com hardware próprio, código aberto, e zero vergonha de ser do interior.</p>
-      <p>A gente escreve código do mesmo jeito que pixa muro: <em class="serif">sem pedir licença.</em></p>
+      <p>A gente escreve código do mesmo jeito que se vive aqui: <em class="serif">sem pedir licença.</em></p>
+    </div>
+
+    <!-- tactile glass card — pulls a fact out of the body copy -->
+    <div class="pull reveal glass-light" data-reveal data-delay="350">
+      <span class="pull-k">★ princípio</span>
+      <p class="pull-v"><em class="serif">do mesmo jeito que se vive aqui</em> — sem pedir licença.</p>
+      <span class="pull-tag">cap_02</span>
     </div>
   </div>
 </section>
@@ -107,55 +142,65 @@
 
 <!-- LUGAR -->
 <section class="place" id="lugar">
-  <span class="chapter">◢ 03</span>
+  <span class="chapter reveal" data-reveal>◢ 03</span>
   <div class="place-inner">
-    <p class="kicker">onde</p>
-    <div class="place-grid">
-      <div class="coord">
+    <p class="kicker reveal" data-reveal>onde</p>
+
+    <div class="place-grid glass-light">
+      <div class="coord reveal" data-reveal data-delay="0">
         <span class="coord-k">LAT</span>
-        <span class="coord-v">04°56′S</span>
+        <span class="coord-v" data-count="04.56">04°56′S</span>
       </div>
-      <div class="coord">
+      <div class="coord reveal" data-reveal data-delay="80">
         <span class="coord-k">LON</span>
         <span class="coord-v">37°58′W</span>
       </div>
-      <div class="coord">
+      <div class="coord reveal" data-reveal data-delay="160">
         <span class="coord-k">CIDADE</span>
         <span class="coord-v">Russas</span>
       </div>
-      <div class="coord">
+      <div class="coord reveal" data-reveal data-delay="240">
         <span class="coord-k">VALE</span>
         <span class="coord-v">Jaguaribe</span>
       </div>
     </div>
-    <h2 class="bighead">
-      230 KM<br>
-      de Fortaleza.<br>
-      <em class="serif">4.700 km</em><br>
-      de São Paulo.<br>
-      <span class="blue">Zero</span> de desculpa.
+
+    <h2 class="bighead splitlines">
+      <span class="line"><span class="line-inner"><span class="big-num" data-count-to="230">0</span> KM</span></span>
+      <span class="line"><span class="line-inner">de Fortaleza.</span></span>
+      <span class="line"><span class="line-inner"><em class="serif"><span class="big-num" data-count-to="4700" data-format="thousands">0</span> km</em></span></span>
+      <span class="line"><span class="line-inner">de São Paulo.</span></span>
+      <span class="line"><span class="line-inner"><span class="blue">Zero</span> de desculpa.</span></span>
     </h2>
   </div>
 </section>
 
 <!-- ASSINATURA -->
 <section class="sign">
-  <span class="chapter">◢ 04</span>
+  <span class="chapter reveal" data-reveal>◢ 04</span>
   <div class="sign-inner">
-    <p class="kicker">assinatura</p>
-    <p class="sign-text">
-      <em class="serif">se a inovação</em><br>
-      <strong>nasce onde</strong><br>
-      <strong>ninguém olha</strong> —<br>
-      <em class="serif">olha pra cá.</em>
+    <p class="kicker reveal" data-reveal>assinatura</p>
+    <p class="sign-text splitlines">
+      <span class="line"><span class="line-inner"><em class="serif">se a inovação</em></span></span>
+      <span class="line"><span class="line-inner"><strong>nasce onde</strong></span></span>
+      <span class="line"><span class="line-inner"><strong>ninguém olha</strong> —</span></span>
+      <span class="line"><span class="line-inner"><em class="serif">olha pra cá.</em></span></span>
     </p>
 
-    <ul class="links">
-      <li><a href="https://instagram.com/oraculos.ia" target="_blank" rel="noopener"><span>instagram</span><span class="arr">↗</span></a></li>
-      <li><a href="https://github.com/ORACULOS-AI" target="_blank" rel="noopener"><span>github</span><span class="arr">↗</span></a></li>
-      <li><a href="mailto:contato@oraculos.com.br"><span>contato@oraculos.com.br</span><span class="arr">↗</span></a></li>
-      <li><a href="https://extensaorussas.ufc.br/pt/startups/oraculos/" target="_blank" rel="noopener"><span>ufc · partec</span><span class="arr">↗</span></a></li>
+    <ul class="links" role="list">
+      <li class="reveal" data-reveal data-delay="0"><a href="https://instagram.com/oraculos.ia" target="_blank" rel="noopener" data-magnetic><span class="link-k">01</span><span class="link-v">instagram</span><span class="arr" aria-hidden="true">↗</span></a></li>
+      <li class="reveal" data-reveal data-delay="80"><a href="https://github.com/ORACULOS-AI" target="_blank" rel="noopener" data-magnetic><span class="link-k">02</span><span class="link-v">github</span><span class="arr" aria-hidden="true">↗</span></a></li>
+      <li class="reveal" data-reveal data-delay="160"><a href="mailto:oraculos.startup@gmail.com" data-magnetic><span class="link-k">03</span><span class="link-v">oraculos.startup@gmail.com</span><span class="arr" aria-hidden="true">↗</span></a></li>
+      <li class="reveal" data-reveal data-delay="240"><a href="https://extensaorussas.ufc.br/pt/startups/oraculos/" target="_blank" rel="noopener" data-magnetic><span class="link-k">04</span><span class="link-v">ufc · partec</span><span class="arr" aria-hidden="true">↗</span></a></li>
     </ul>
+
+    <a href="mailto:oraculos.startup@gmail.com" class="cta glass" data-magnetic>
+      <span class="cta-text">
+        <span class="cta-k">★ entre em contato</span>
+        <span class="cta-v">oraculos.startup@gmail.com</span>
+      </span>
+      <span class="cta-arrow" aria-hidden="true">↗</span>
+    </a>
   </div>
 </section>
 
@@ -170,6 +215,136 @@
     <span>FEITO NO CE</span>
   </div>
 </footer>
+
+<script>
+(() => {
+  const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // ——— scroll reveal ———
+  const targets = document.querySelectorAll('[data-reveal], .splitlines');
+  if (reduced || !('IntersectionObserver' in window)) {
+    targets.forEach(el => el.classList.add('is-in'));
+  } else {
+    const io = new IntersectionObserver((entries) => {
+      for (const e of entries) {
+        if (!e.isIntersecting) continue;
+        const el = e.target;
+        const d = parseInt(el.dataset.delay || '0', 10);
+        setTimeout(() => el.classList.add('is-in'), d);
+        io.unobserve(el);
+      }
+    }, { threshold: 0.18, rootMargin: '0px 0px -8% 0px' });
+    targets.forEach(el => io.observe(el));
+
+    // safety net: if an element is already in the viewport at load (e.g. IO threshold quirks), force it in.
+    requestAnimationFrame(() => {
+      targets.forEach((el) => {
+        const r = el.getBoundingClientRect();
+        if (r.top < innerHeight && r.bottom > 0) {
+          const d = parseInt(el.dataset.delay || '0', 10);
+          setTimeout(() => el.classList.add('is-in'), d);
+          io.unobserve(el);
+        }
+      });
+    });
+  }
+
+  // ——— hero parallax (scroll + pointer) ———
+  if (!reduced) {
+    const hero = document.querySelector('.hero');
+    const bg = document.querySelector('.hero-bg');
+
+    let py = 0, ty = 0;
+    const onScroll = () => {
+      ty = Math.min(window.scrollY, window.innerHeight);
+    };
+    const tick = () => {
+      py += (ty - py) * 0.08;
+      if (bg) bg.style.transform = `translate3d(0, ${py * 0.18}px, 0) scale(1.06)`;
+      requestAnimationFrame(tick);
+    };
+    addEventListener('scroll', onScroll, { passive: true });
+    requestAnimationFrame(tick);
+
+    // pointer-driven micro tilt on hero word — uses CSS vars so it composes with child line-rise animation
+    const word = document.querySelector('.hero-word');
+    if (word && hero) {
+      hero.addEventListener('pointermove', (e) => {
+        const r = hero.getBoundingClientRect();
+        const x = (e.clientX - r.left) / r.width - 0.5;
+        const y = (e.clientY - r.top) / r.height - 0.5;
+        word.style.setProperty('--tilt-x', (x * 8) + 'px');
+        word.style.setProperty('--tilt-y', (y * 6) + 'px');
+      });
+      hero.addEventListener('pointerleave', () => {
+        word.style.setProperty('--tilt-x', '0px');
+        word.style.setProperty('--tilt-y', '0px');
+      });
+    }
+  }
+
+  // ——— spotlight follows pointer (dark sections) ———
+  if (!reduced) {
+    const spot = document.querySelector('.spotlight');
+    addEventListener('pointermove', (e) => {
+      spot.style.setProperty('--mx', e.clientX + 'px');
+      spot.style.setProperty('--my', e.clientY + 'px');
+    }, { passive: true });
+  }
+
+  // ——— topbar glass intensifies on scroll ———
+  {
+    const topbar = document.querySelector('.topbar');
+    const onTop = () => topbar.classList.toggle('is-scrolled', window.scrollY > 40);
+    addEventListener('scroll', onTop, { passive: true });
+    onTop();
+  }
+
+  // ——— count-up numbers (place section) ———
+  if (!reduced) {
+    const nums = document.querySelectorAll('[data-count-to]');
+    const fmt = (n, kind) => kind === 'thousands'
+      ? n.toLocaleString('pt-BR')
+      : Math.round(n).toString();
+    const animate = (el) => {
+      const to = parseFloat(el.dataset.countTo);
+      const kind = el.dataset.format || 'int';
+      const dur = 1400, t0 = performance.now();
+      const step = (now) => {
+        const t = Math.min(1, (now - t0) / dur);
+        const eased = 1 - Math.pow(1 - t, 3);
+        el.textContent = fmt(to * eased, kind);
+        if (t < 1) requestAnimationFrame(step);
+        else el.textContent = fmt(to, kind);
+      };
+      requestAnimationFrame(step);
+    };
+    if ('IntersectionObserver' in window) {
+      const ob = new IntersectionObserver((entries) => {
+        for (const e of entries) {
+          if (e.isIntersecting) { animate(e.target); ob.unobserve(e.target); }
+        }
+      }, { threshold: 0.4 });
+      nums.forEach((n) => ob.observe(n));
+    } else {
+      nums.forEach(animate);
+    }
+  }
+
+  // ——— magnetic links ———
+  if (!reduced) {
+    document.querySelectorAll('[data-magnetic]').forEach((el) => {
+      el.addEventListener('pointermove', (e) => {
+        const r = el.getBoundingClientRect();
+        const x = e.clientX - (r.left + r.width / 2);
+        const y = e.clientY - (r.top + r.height / 2);
+        el.style.transform = `translate(${x * 0.06}px, ${y * 0.18}px)`;
+      });
+      el.addEventListener('pointerleave', () => { el.style.transform = ''; });
+    });
+  }
+})();
+</script>
 
 </body>
 </html>
